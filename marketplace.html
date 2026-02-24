@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ZHAR OFFICIAL - Marketplace</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+
+body{
+  background:#0b1120;
+  color:#fff;
+  scroll-behavior:smooth;
+  overflow-x:hidden;
+}
+
+.stars{
+  position:fixed;
+  width:100%;
+  height:100%;
+  top:0;
+  left:0;
+  z-index:-1;
+  background:transparent url("https://www.transparenttextures.com/patterns/stardust.png") repeat;
+  animation:moveStars 60s linear infinite;
+  opacity:0.4;
+}
+
+@keyframes moveStars{
+  from{background-position:0 0;}
+  to{background-position:1000px 1000px;}
+}
+
+nav{
+  position:fixed;
+  top:0;
+  width:100%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px 40px;
+  background:rgba(11,17,32,0.9);
+  backdrop-filter:blur(10px);
+  z-index:1000;
+}
+
+.logo{
+  color:#22c55e;
+  font-weight:700;
+  font-size:20px;
+}
+
+.menu a{
+  color:#fff;
+  text-decoration:none;
+  margin-left:20px;
+  font-size:14px;
+  transition:0.3s;
+}
+
+.menu a:hover{
+  color:#22c55e;
+}
+
+.hero{
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  padding:20px;
+}
+
+.hero h1{
+  font-size:42px;
+  animation:fadeIn 1.5s ease forwards;
+  opacity:0;
+}
+
+.hero p{
+  margin-top:20px;
+  max-width:500px;
+  color:#cbd5e1;
+  animation:fadeIn 2.5s ease forwards;
+  opacity:0;
+}
+
+.hero-btn{
+  margin-top:30px;
+  padding:14px 35px;
+  background:#22c55e;
+  color:#000;
+  border-radius:30px;
+  text-decoration:none;
+  font-weight:600;
+  transition:0.3s;
+  animation:fadeIn 3.5s ease forwards;
+  opacity:0;
+}
+
+.hero-btn:hover{
+  transform:scale(1.07);
+  box-shadow:0 0 20px #22c55e;
+}
+
+@keyframes fadeIn{
+  from{opacity:0; transform:translateY(20px);}
+  to{opacity:1; transform:translateY(0);}
+}
+
+.section{
+  padding:80px 20px;
+  max-width:600px;
+  margin:auto;
+}
+
+.title{
+  text-align:center;
+  font-size:26px;
+  font-weight:900;
+  margin-bottom:30px;
+  color:#22c55e;
+}
+
+.accordion{
+  background:#1e293b;
+  border-radius:15px;
+  margin-bottom:15px;
+  overflow:hidden;
+  cursor:pointer;
+}
+
+.accordion-header{
+  padding:18px;
+  font-weight:600;
+}
+
+.accordion-content{
+  max-height:0;
+  overflow:hidden;
+  transition:0.4s;
+  background:#111827;
+  padding:0 18px;
+  font-size:14px;
+  color:#cbd5e1;
+}
+
+.accordion.active .accordion-content{
+  padding:18px;
+  max-height:300px;
+}
+
+.card{
+  background:#1e293b;
+  border-radius:20px;
+  padding:25px;
+  margin-bottom:25px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.5);
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:translateY(-5px);
+}
+
+.card h3{
+  color:#22c55e;
+  margin-bottom:10px;
+}
+
+.card ul{
+  list-style:none;
+  font-size:14px;
+  line-height:1.8;
+}
+
+.card ul li i{
+  color:#22c55e;
+  margin-right:8px;
+}
+
+.order-btn{
+  margin-top:20px;
+  display:inline-block;
+  background:#22c55e;
+  padding:10px 25px;
+  border-radius:20px;
+  text-decoration:none;
+  color:#000;
+  font-weight:600;
+}
+
+footer{
+  text-align:center;
+  padding:40px 20px;
+  background:#0f172a;
+  color:#94a3b8;
+}
+</style>
+</head>
+<body>
+
+<div class="stars"></div>
+
+<nav>
+  <div class="logo"><i class="fas fa-store"></i> ZHAR WEBSITE</div>
+  <div class="menu">
+    <a href="zharOfficial.html">Home</a>
+    <a href="#produk">Produk</a>
+    <a href="#faq">FAQ</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <h1>Selamat Datang di MarketPlace</h1>
+  <p>Tempat Jasa pembuatan website, dan chatbot. jasa yang terpercaya dengan harga terjangkau dan aman.</p>
+  <a href="#produk" class="hero-btn">
+    <i class="fas fa-cart-shopping"></i> Lihat Produk
+  </a>
+</section>
+
+<div id="produk" class="section">
+  <div class="title">Produk Kami</div>
+
+  <div class="card">
+    <h3>Web bisnis</h3>
+    <p>Rp150.000</p>
+    <ul>
+      <li><i class="fas fa-check-circle"></i> Gratis hosting</li>
+      <li><i class="fas fa-check-circle"></i> Full Akses</li>
+      <li><i class="fas fa-check-circle"></i> Garansi 7 hari</li>
+      <li><i class="fas fa-check-circle"></i> Harga Terjangkau</li>
+    </ul>
+    <a href="https://wa.me/628567928153?text=assalamualaikum+min+ane+pen+order+web+bisnis" class="order-btn">Order</a>
+  </div>
+  <div class="card">
+    <h3>Chat Bot</h3>
+    <p>Rp200.000</p>
+    <ul>
+      <li><i class="fas fa-check-circle"></i> Gratis hosting</li>
+      <li><i class="fas fa-check-circle"></i> Full Akses</li>
+      <li><i class="fas fa-check-circle"></i> Garansi 7 hari</li>
+      <li><i class="fas fa-check-circle"></i> Harga Terjangkau</li>
+      <li><i class="fas fa-check-circle"></i> Bisa di akses di chrome dan aplikasi</li>
+    </ul>
+    <a href="https://wa.me/628567928153?text=assalamualaikum+min+ane+pen+order+chatBot" class="order-btn">Order</a>
+  </div>
+  <div class="card">
+    <h3>Web Profil</h3>
+    <p>Rp100.000</p>
+    <ul>
+      <li><i class="fas fa-check-circle"></i> Gratis hosting</li>
+      <li><i class="fas fa-check-circle"></i> Full Akses</li>
+      <li><i class="fas fa-check-circle"></i> Garansi 7 hari</li>
+      <li><i class="fas fa-check-circle"></i> Harga Terjangkau</li>
+    </ul>
+    <a href="https://wa.me/628567928153?text=assalamualaikum+min+ane+pen+order+web+profil" class="order-btn">Order</a>
+  </div>
+</div>
+
+<div id="faq" class="section">
+  <div class="title">FAQ</div>
+
+  <div class="accordion">
+    <div class="accordion-header">
+      <i class="fas fa-play"></i> Bagaimana cara order?
+    </div>
+    <div class="accordion-content">
+      Pilih produk → Klik order → Chat Admin → Transfer → Kirim bukti → Pesanan diproses.
+    </div>
+  </div>
+  
+  <div class="accordion">
+    <div class="accordion-header">
+      <i class="fas fa-play"></i> Apakah ada garansi?
+    </div>
+    <div class="accordion-content">
+      Ya ada, garansi berlaku selama 7 hari.
+    </div>
+  </div>
+
+  <div class="accordion">
+    <div class="accordion-header">
+      <i class="fas fa-play"></i> Payment DANA
+    </div>
+    <div class="accordion-content">
+      Nomor: 085811570814<br>
+      An   : muhammad idzhar al-asyari<br><br>
+      Pastikan nomor benar sebelum transfer.<br>
+      Mohon maaf jika anda salah mentransfer kami tidak bertanggung.<br><br>
+      TERIMA KASIH
+    </div>
+  </div>
+</div>
+
+<footer>
+  copyright@ZHAR_WEB
+</footer>
+
+<script>
+const accordions = document.querySelectorAll(".accordion");
+accordions.forEach(acc => {
+  acc.addEventListener("click", () => {
+    acc.classList.toggle("active");
+  });
+});
+</script>
+
+</body>
+</html>

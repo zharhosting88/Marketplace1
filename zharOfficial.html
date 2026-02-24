@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ZHAR OFFICIAL</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+
+body{
+  background:linear-gradient(180deg,#0f172a,#000);
+  color:#fff;
+  text-align:center;
+  padding:30px 20px;
+}
+
+.profile-img{
+  width:140px;
+  height:140px;
+  border-radius:50%;
+  border:4px solid #3b82f6;
+  padding:4px;
+  animation:spin 8s linear infinite;
+}
+
+@keyframes spin{
+  from{transform:rotate(0deg);}
+  to{transform:rotate(360deg);}
+}
+
+h1{
+  margin-top:15px;
+  font-size:26px;
+  font-weight:700;
+}
+
+.verify{
+  color:#3b82f6;
+  margin-left:5px;
+}
+
+.desc{
+  color:#aaa;
+  font-size:14px;
+  margin-bottom:25px;
+}
+
+.link{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  background:linear-gradient(145deg,#1e293b,#111827);
+  padding:15px;
+  margin:12px auto;
+  width:100%;
+  max-width:420px;
+  border-radius:15px;
+  text-decoration:none;
+  color:#fff;
+  font-weight:600;
+  transition:0.3s;
+  box-shadow:0 5px 20px rgba(0,0,0,0.4);
+}
+
+.link:hover{
+  transform:scale(1.05);
+  background:#1e293b;
+}
+
+.link i{
+  font-size:18px;
+}
+
+.music-box{
+  background:linear-gradient(145deg,#1e293b,#111827);
+  max-width:420px;
+  margin:25px auto;
+  padding:20px;
+  border-radius:20px;
+  box-shadow:0 5px 20px rgba(0,0,0,0.5);
+}
+
+.music-title{
+  font-weight:600;
+  margin-bottom:10px;
+}
+
+audio{
+  width:100%;
+}
+
+.theme-btn{
+  margin-top:20px;
+  padding:12px;
+  border-radius:20px;
+  background:#1e293b;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.theme-btn:hover{
+  background:#3b82f6;
+}
+
+.light{
+  background:#f3f4f6;
+  color:#111;
+}
+
+.light .link{
+  background:#fff;
+  color:#000;
+}
+
+.light .music-box{
+  background:#fff;
+  color:#000;
+}
+</style>
+</head>
+
+<body>
+
+<img src="https://i.imgur.com/cGQQSHV.png" class="profile-img">
+
+<h1>ZHAR OFFICIAL <i class="fas fa-check-circle verify"></i></h1>
+<p class="desc">Marketplace • Website • Hosting</p>
+
+<a href="mainten.html" class="link"><i class="fab fa-youtube"></i> YouTube</a>
+<a href="mainten.html" class="link"><i class="fab fa-tiktok"></i> TikTok</a>
+<a href="marketplace.html" class="link"><i class="fas fa-store"></i> MarketPlace</a>
+<a href="https://whatsapp.com/channel/0029Vb6nCyFCcW4rqbOy5414" class="link"><i class="fab fa-whatsapp"></i> Channel WhatsApp</a>
+<a href="https://whatsapp.com/channel/0029Vb6nCyFCcW4rqbOy5414" class="link"><i class="fas fa-comments"></i> Testimoni WhatsApp</a>
+<a href="https://chat.whatsapp.com/FStAbQOHz346MOlakvAGuk?mode=hqctcla" class="link"><i class="fas fa-users"></i> Grup WhatsApp</a>
+<a href="Https://t.me/zharWeb" class="link"><i class="fab fa-telegram"></i> Telegram</a>
+<a href="https://t.me/BugWhats4pp" class="link"><i class="fas fa-comment-dots"></i> Room Telegram</a>
+
+<div class="music-box">
+  <div class="music-title">
+    <i class="fas fa-music"></i> One Direction - Where We Are
+  </div>
+  <audio controls autoplay>
+    <source src="lagu_opening.mp3" type="audio/mpeg">
+  </audio>
+</div>
+
+<div class="theme-btn" onclick="toggleTheme()">
+  <i class="fas fa-circle-half-stroke"></i> Change Theme
+</div>
+
+<script>
+function toggleTheme(){
+  document.body.classList.toggle("light");
+}
+</script>
+
+</body>
+</html>
